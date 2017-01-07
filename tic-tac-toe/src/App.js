@@ -1,19 +1,9 @@
 import React, { Component } from 'react';
 
 import './App.css';
-import Board from './Board/Board.js';
+import Game from './Game/Game.js';
 
 class App extends Component {
-  constructor() {
-      super();
-      this.state = {
-        history: [{
-          squares: Array(9).fill(null)
-        }],
-        xIsNext: true
-      };
-    }
-
   render() {
     return (
       <div className="App">
@@ -22,7 +12,7 @@ class App extends Component {
           <h3>Do you wanna play?</h3>
         </div>
         <div className="game-board">
-          <Board/>
+          <Game/>
         </div>
       </div>
     );
