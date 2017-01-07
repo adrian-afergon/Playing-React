@@ -1,0 +1,11 @@
+.board-row{
+  display:block;
+  margin: 0px;
+  padding:0px;
+}
+
+.board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
