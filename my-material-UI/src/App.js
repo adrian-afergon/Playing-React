@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import RaisedButton from 'material-ui/RaisedButton';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import BottomNavigationExampleSimple from './BottomNavigationExampleSimple';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import AppBarExample from './AppBarExample';
 
 class App extends Component {
-  render() {
+
+  constructor(props: any) {
     injectTapEventPlugin();
+    super(props);
+  }
+  render() {
     return (
       <div className="App">
-        <RaisedButton label="Default" />
+        <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+          <AppBarExample/>
+
+        </MuiThemeProvider>
       </div>
     );
   }
